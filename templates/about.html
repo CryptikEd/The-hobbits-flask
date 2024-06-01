@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% block content %}
 
-    {{ company[1]["name"] }}
+    
 
     <h2>{{ page_title }}</h2>
     <p>
@@ -13,6 +13,8 @@
 		action. The superstitious Dwarves also considered thirteen to be an unlucky number, and as Gandalf had planned to
 		leave on other business, welcomed a fourteenth to fill into their party.
     </p>
+
+    (% for member in company %)
 
     <div class="row featurette">
         <div class="col-md-7">
@@ -30,18 +32,7 @@
             <img src="https://vignette.wikia.nocookie.net/lotr/images/3/3f/ThorinBIG.jpg" alt="">
         </div>
     </div>
-
-    <div class="row featurette">
-        <div class="col-md-5">
-            <img src="https://vignette.wikia.nocookie.net/lotr/images/b/b4/The-Hobbit-Fili-and-Kili.jpg" alt="">
-        </div>
-        <div class="col-md-7">
-            <h3>Fili and Kili</h3>
-			<p>
-				Fíli and Kíli were nephews of Thorin, who was the elder brother of their mother Dís. They were also nephews of
-				Frerin, grandsons of Thráin II, and great-grandsons of Thrór. Fíli's most distinguishing feature was his long nose,
-				the longest of any of the Dwarves in Thorin's company.
-			</p>
-        </div>
-    </div>
+  
+    (% endfor %)
+    
 {% endblock %}
